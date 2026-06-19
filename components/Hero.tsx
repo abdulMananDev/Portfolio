@@ -67,7 +67,7 @@ export default function Hero() {
               View Work <ArrowRight size={14} />
             </a>
             <a
-              href="/resume.pdf"
+              href="/resume/Abdul Manan Resume - CV.pdf"
               download
               className="inline-flex items-center gap-2 px-6 py-3 border border-[var(--color-border)] text-[var(--color-fg)] text-sm font-semibold rounded-md hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98]"
             >
