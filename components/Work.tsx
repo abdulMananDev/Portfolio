@@ -2,7 +2,7 @@
 import Link from "next/link";
 import {
   Globe,
-  Users,
+  HeartHandshake,
   Map,
   BarChart2,
   ArrowRight,
@@ -76,14 +76,14 @@ const projects: {
   },
   {
     slug: "upliftarray",
-    label: "Mental Health · WebRTC",
+    label: "Social Impact · Mental Health",
     title: "UpliftArray",
     description:
-      "Internal A/B testing and feature-flag platform with a custom Bayesian statistics engine — eliminated $38k/year in third-party tooling costs.",
-    tech: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
-    icon: Users,
-    color: "bg-amber-50 border-amber-200",
-    iconColor: "text-amber-600",
+      "A counselor–student wellbeing platform for campus mental-health support. Role-based access across three user types, session scheduling, and in-app WebRTC video calls. End-to-end tested with Playwright.",
+    tech: ["React", "WebRTC", "RBAC", "Playwright"],
+    icon: HeartHandshake,
+    color: "bg-rose-50 border-rose-200",
+    iconColor: "text-rose-600",
     badge: "Mental Health · WebRTC",
   },
 ];
