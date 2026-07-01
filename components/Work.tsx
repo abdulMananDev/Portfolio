@@ -40,7 +40,7 @@ const projects: {
     iconColor: "text-indigo-600",
     badge: "200K Rows · 6x Faster",
     privateLabel: "Client project",
-    ctaLabel: "Case study",
+    ctaLabel: "View Case study",
   },
   {
     slug: "leadvector",
