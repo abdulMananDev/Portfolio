@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-
+import Script from "next/script";
 const archivo = Archivo({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -48,6 +48,10 @@ export default function RootLayout({
       className={`scroll-smooth ${archivo.variable} ${spaceGrotesk.variable}`}
     >
       <body className="antialiased">{children}</body>
+      <script
+        src="https://mcp-server-ai-powered-chat-bot.vercel.app/embed/pk_live_bc39ea942635fb2ba09d1e836a667210/loader.js"
+        async
+      ></script>
     </html>
   );
 }
