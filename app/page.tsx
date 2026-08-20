@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <iframe
-        src="http://localhost:3009/embed/pk_live_bc39ea942635fb2ba09d1e836a667210"
+        src="https://mcp-server-ai-powered-chat-bot.vercel.app/embed/pk_live_bc39ea942635fb2ba09d1e836a667210"
         style={{
           border: "0",
           position: "fixed",
