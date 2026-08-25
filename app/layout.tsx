@@ -48,10 +48,10 @@ export default function RootLayout({
       className={`scroll-smooth ${archivo.variable} ${spaceGrotesk.variable}`}
     >
       <body className="antialiased">{children}</body>
-      <script
+      {/* <script
         src="https://mcp-server-ai-powered-chat-bot.vercel.app/embed/pk_live_bc39ea942635fb2ba09d1e836a667210/loader.js"
         async
-      ></script>
+      ></script> */}
     </html>
   );
 }
