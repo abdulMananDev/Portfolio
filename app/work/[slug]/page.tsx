@@ -23,6 +23,15 @@ export async function generateMetadata({
   return {
     title: `${study.title} — Abdul Manan Malik`,
     description: study.summary,
+    alternates: {
+      canonical: `/work/${study.slug}`,
+    },
+    openGraph: {
+      title: `${study.title} — Abdul Manan Malik`,
+      description: study.summary,
+      url: `/work/${study.slug}`,
+      type: "article",
+    },
   };
 }
 
