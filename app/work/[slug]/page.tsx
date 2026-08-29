@@ -6,8 +6,6 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { caseStudies, getCaseStudy } from "@/lib/case-studies";
 import Reveal from "@/components/Reveal";
 
-import Weather from "@/components/weather/Weather";
-
 export async function generateStaticParams() {
   return caseStudies.map((cs) => ({ slug: cs.slug }));
 }
@@ -55,7 +53,6 @@ export default async function CaseStudyPage({
             className="font-archivo font-bold text-sm tracking-tight text-[var(--color-fg)]"
           >
             AM
-            <span className="text-[var(--color-accent)]">.</span> <Weather />
           </Link>
           <Link
             href="/#work"
