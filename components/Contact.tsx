@@ -1,5 +1,7 @@
 import { Mail, Phone, ArrowRight } from "lucide-react";
 import Reveal from "./Reveal";
+import { GitHubIcon, LinkedInIcon } from "./SocialIcons";
+import { SOCIAL_LINKS } from "@/lib/site";
 
 export default function Contact() {
   return (
@@ -38,6 +40,24 @@ export default function Contact() {
             >
               <Phone size={15} />
               +91 9596460305
+            </a>
+            <a
+              href={SOCIAL_LINKS.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 border border-zinc-700 text-zinc-300 text-sm font-semibold rounded-md hover:border-zinc-500 hover:text-white transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98]"
+            >
+              <LinkedInIcon size={15} />
+              LinkedIn
+            </a>
+            <a
+              href={SOCIAL_LINKS.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 border border-zinc-700 text-zinc-300 text-sm font-semibold rounded-md hover:border-zinc-500 hover:text-white transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98]"
+            >
+              <GitHubIcon size={15} />
+              GitHub
             </a>
           </div>
         </Reveal>

@@ -1,10 +1,13 @@
 import Reveal from "./Reveal";
+import { SOCIAL_LINKS } from "@/lib/site";
 
 const meta = [
   { label: "Location", value: "Delhi, India, remote-ready" },
   { label: "Timezone", value: "IST (UTC+5:30), flexible" },
   { label: "Education", value: "B.Tech CS, GPA 8.45" },
   { label: "Email", value: "malikmanan97@gmail.com", href: "mailto:malikmanan97@gmail.com" },
+  { label: "LinkedIn", value: "abdul-manan-malik", href: SOCIAL_LINKS.linkedin },
+  { label: "GitHub", value: "abdulMananDev", href: SOCIAL_LINKS.github },
 ];
 
 export default function About() {
@@ -67,6 +70,9 @@ export default function About() {
                       {item.href ? (
                         <a
                           href={item.href}
+                          {...(item.href.startsWith("http")
+                            ? { target: "_blank", rel: "noopener noreferrer" }
+                            : {})}
                           className="text-[var(--color-fg)] no-underline hover:text-[var(--color-accent)] hover:underline underline-offset-2 transition-colors duration-150"
                         >
                           {item.value}
