@@ -5,6 +5,7 @@ import {
   HeartHandshake,
   Map,
   BarChart2,
+  ShieldCheck,
   ArrowRight,
   ExternalLink,
 } from "lucide-react";
@@ -26,7 +27,35 @@ const projects: {
   externalLinks?: ExternalLinkItem[];
   privateLabel?: string;
   ctaLabel?: string;
+  featured?: boolean;
 }[] = [
+  // Featured (full width)
+  {
+    slug: "sayline",
+    label: "SaaS · AI · Full Stack",
+    title: "Sayline",
+    description:
+      "Multi-tenant brand compliance SaaS with an AI chat assistant, built solo end to end. Brands get an embeddable chat widget that answers in their approved voice. I own the full stack: Next.js frontend, Supabase Postgres with row-level security, per-tenant LLM caps, Redis rate limiting and a hybrid Cheerio + Gemini scraper.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Gemini",
+      "Upstash Redis",
+    ],
+    icon: ShieldCheck,
+    color: "bg-violet-50 border-violet-200",
+    iconColor: "text-violet-600",
+    badge: "Founder · Solo Full Stack",
+    featured: true,
+    externalLinks: [
+      {
+        label: "Live app",
+        href: "https://mcp-server-ai-powered-chat-bot.vercel.app/",
+      },
+    ],
+  },
   // Top row
   {
     slug: "territory-intelligence",
@@ -190,7 +219,11 @@ export default function Work() {
               </>
             );
             return (
-              <Reveal key={p.slug} delay={0.08 + 0.07 * i}>
+              <Reveal
+                key={p.slug}
+                delay={0.08 + 0.07 * i}
+                className={p.featured ? "sm:col-span-2" : ""}
+              >
                 {p.externalLinks || p.privateLabel ? (
                   <div className={cardClassName}>{cardContent}</div>
                 ) : (

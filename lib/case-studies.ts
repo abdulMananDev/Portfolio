@@ -20,6 +20,53 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: "sayline",
+    label: "SaaS · AI · Full Stack",
+    title: "Sayline",
+    summary:
+      "A multi-tenant brand compliance SaaS with an AI chat assistant, designed, built and run solo, from database to embeddable widget.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Row Level Security",
+      "Gemini Flash Lite",
+      "Upstash Redis",
+      "Cheerio",
+    ],
+    meta: "Live: mcp-server-ai-powered-chat-bot.vercel.app · Role: Founder, full stack",
+    overview:
+      "Sayline gives brands an AI chat assistant that stays on-brand and compliant. Each brand is a tenant: Sayline ingests its content, and the assistant answers customers through a widget the brand embeds on its own site. I'm the solo founder, so I own everything: product, frontend, backend, database design, security and infrastructure.",
+    problem:
+      "An AI assistant speaking for a brand can't go off-script, and in a multi-tenant product one brand's data must never leak into another's answers. On top of that, LLM calls cost real money, so one noisy tenant or a scripted abuser on a public widget could burn through the budget. The challenge was building strict tenant isolation and cost control into the foundation, not bolting them on later.",
+    builtBlocks: [
+      {
+        heading: "Tenant isolation at the database layer",
+        paragraph:
+          "The app connects to Postgres through a restricted role (app_user) with Row Level Security policies, so tenant scoping is enforced by the database itself, not just application code. A bug in a query can't return another tenant's data.",
+      },
+      {
+        heading: "Cost and abuse controls",
+        bullets: [
+          "Per-tenant daily LLM caps, so no single brand can run up unbounded model costs.",
+          "Layered rate limiting on Upstash Redis, protecting the public widget endpoints from abuse.",
+        ],
+      },
+      {
+        heading: "Content ingestion and delivery",
+        bullets: [
+          "Hybrid web scraper: Cheerio handles structured pages quickly, and Gemini handles the messy ones, turning a brand's site into clean knowledge for the assistant.",
+          "Embeddable chat widget that brands drop onto their own sites.",
+          "Three-tier pricing built into the product from day one.",
+        ],
+      },
+    ],
+    outcome:
+      "Sayline is deployed and live, with its first pilot tenant onboarded. It's the project where I took full ownership beyond the frontend: schema design, security policies, API limits and infrastructure.",
+    showNo: true,
+  },
+  {
     slug: "territory-intelligence",
     label: "Enterprise · Geospatial Analytics",
     title: "Territory Intelligence Platform",
